@@ -10,17 +10,12 @@ import sklearn
 
  
 #load the trained model
-model = tf.keras.models.load_model('/Users/user/Documents/MLOps/airline_tweet_project/simplernn_model.h5')
+model = tf.keras.models.load_model('airline_tweet_project/Airline_Sentiment_Analysis_Project/simplernn_model.h5')
 
 #load the encoder
-enc_path = '/Users/user/Documents/MLOps/airline_tweet_project/needed_files/enc.pkl'
+enc_path = 'airline_tweet_project/Airline_Sentiment_Analysis_Project/enc.pkl'
 with open(enc_path, 'rb') as file:
     encoder = pickle.load(file)
-
-#load the vectorizer
-load_path = '/Users/user/Documents/MLOps/airline_tweet_project/tokenizer.pkl'
-with open(load_path, mode='rb') as f:
-    tk = pickle.load(f)
 
 
 
@@ -29,7 +24,7 @@ def input_preprocessing(text):
     #tokenize the text
     token = tk.texts_to_sequences([text])
 
-    #pad the tokens
+    #pad the tokens to have consistent length of 28.
     token = pad_sequences(token, maxlen=28)
     return token[0]
 
