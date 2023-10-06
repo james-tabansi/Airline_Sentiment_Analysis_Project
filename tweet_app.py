@@ -10,10 +10,10 @@ import sklearn
 
  
 #load the trained model
-model = tf.keras.models.load_model('airline_tweet_project/Airline_Sentiment_Analysis_Project/simplernn_model.h5')
+model = tf.keras.models.load_model('simplernn_model.h5')
 
 #load the encoder
-enc_path = 'airline_tweet_project/Airline_Sentiment_Analysis_Project/enc.pkl'
+enc_path = 'enc.pkl'
 with open(enc_path, 'rb') as file:
     encoder = pickle.load(file)
 
