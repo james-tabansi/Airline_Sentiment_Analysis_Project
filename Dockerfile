@@ -8,8 +8,8 @@ COPY . /app
 WORKDIR /app
 
 #install dependencies in requirements.txt
-CMD pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 #launch the app
-streamlit run tweet_app.py
+CMD streamlit run tweet_app.py
 
