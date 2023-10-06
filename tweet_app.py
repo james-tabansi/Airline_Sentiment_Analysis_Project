@@ -16,6 +16,9 @@ enc_path = 'enc.pkl'
 with open(enc_path, 'rb') as file:
     encoder = pickle.load(file)
 
+tokenizer_path = 'tokenizer.pkl'
+with open(tokenizer_path, mode='rb') as tokenize:
+    tk = pickle.load(tokenize)
 
 
 #pipeline for preprocessing
