@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf8">
+    <title>Airline tweet sentiment analysis app</title>
+
+</head>
+
+<body>
+    <!--create the header-->
+    <h1>Sentiment Analysis App</h1>
+    <!-- create the form that will hold where customer will type-->
+    <form method="POST">
+        <!--set the label for the form and reference it to the variable used in the flask app-->
+        <label for="input_from_user">Enter text for Sentiment Analysis</label>
+        <br>
+        <!--create the text area-->
+        <textarea id="input_from_user", name="input_from_user", rows="5", cols="60"></textarea><br><br>
+
+        <!--create the button-->
+        <button type="submit">Predict Sentiment</button>
+
+    </form>
+
+    <!--display the sentiment using a conditional statemnt-->
+    {% if sentiment %}
+    <h2>sentiment: {{ sentiment }}</h2>
+    {% endif %}
+</body>
+
+</html>
